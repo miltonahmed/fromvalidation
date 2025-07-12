@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gray-400 p-6">
@@ -9,9 +15,7 @@ function App() {
             Signup Form
           </h2>
 
-          <label className="block mb-3 text-gray-700 font-semibold">
-            Name
-          </label>
+          <label className="block mb-3 text-gray-700 font-semibold">Name</label>
           <input
             type="text"
             placeholder="Full Name"
